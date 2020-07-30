@@ -63,7 +63,23 @@ export default class ListView<M extends Model> extends RListPage<
   }
   render(): ReactNode {
     const {locales,items} =this.props
-    
+    var it =[
+      {
+        id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
+        name: "First Item",
+        calories: 300,
+      },
+      {
+        id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
+        name: "Second Item",
+        calories: 300,
+      },
+      {
+        id: "58694a0f-3da1-471f-bd96-145571e29d72",
+        name: "Third Item",
+        calories: 300,
+      },
+    ]; 
    
 
     function Item({ title, calories }: any) {
@@ -77,16 +93,14 @@ export default class ListView<M extends Model> extends RListPage<
     }
     return (
       <View style={styles.container}>
-        <Text>1111222</Text>
-        <SafeAreaView>
+        <Text>11113333222</Text>
           <FlatList
-            data={items}
+            data={it}
             renderItem={({ item }) => (
               <Item title={item.name} calories={item.calories} />
             )}
             keyExtractor={(item: any) => item.id}
           />
-        </SafeAreaView>
       </View>
     );
   }

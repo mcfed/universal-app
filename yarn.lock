@@ -1085,8 +1085,10 @@
     reflect-metadata "^0.1.13"
     reselect "^4.0.0"
 
-"@mcfed/crud@../crud":
-  version "0.4.3-beta"
+"@mcfed/crud@^0.5.0-beta":
+  version "0.5.0-beta"
+  resolved "https://registry.yarnpkg.com/@mcfed/crud/-/crud-0.5.0-beta.tgz#19b7d64011523c152ef0443592e8e931f1b8d778"
+  integrity sha512-J2hvbPnxebGtv3EseGxYdj2UyLlbkmGSnHjO7Qj5BbOaFpsj1tuYcrlCekvtvV+JijI17/UT7+z2itY32Kbpig==
   dependencies:
     react "^16.13.1"
     url "^0.11.0"
