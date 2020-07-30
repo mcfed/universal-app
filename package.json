@@ -1,0 +1,60 @@
+{
+  "name": "rmdesktop",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "start:macos": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-macos",
+    "start:client": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-client",
+    "start:web": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-web"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@mcfed/components": "^0.3.0-beta2",
+    "@mcfed/core": "^0.4.18",
+    "@mcfed/crud": "../crud",
+    "@mcfed/utils": "^0.2.0-rc8",
+    "antd": "3.26.18",
+    "i18next": "^19.5.2",
+    "react": "16.9.0",
+    "react-dom": "16.13.1",
+    "react-i18next": "^11.7.0",
+    "react-native": "0.61.5",
+    "react-native-macos": "^0.61.0-0",
+    "react-native-web": "^0.13.4",
+    "react-redux": "5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@types/jest": "^24.0.24",
+    "@types/react-native": "^0.62.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-test-renderer": "16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-jest": "^24.9.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "16.9.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
