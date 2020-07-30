@@ -9,6 +9,13 @@ if (process.argv.includes(macSwitch)) {
     reactNativePath: 'node_modules/react-native-macos',
   };
 }
+if (process.argv.includes(webSwitch)) {
+  process.argv = process.argv.filter(arg => arg !== webSwitch);
+  process.argv.push('--config=metro.config.web.js');
+  module.exports = {
+    reactNativePath: 'node_modules/react-native-web',
+  };
+}
 
 if (process.argv.includes(clientSwitch)) {
   process.argv = process.argv.filter(arg => arg !== clientSwitch);
