@@ -26,7 +26,8 @@
     "react-native": "0.61.5",
     "react-native-macos": "^0.61.0-0",
     "react-native-web": "^0.13.4",
-    "react-redux": "5.1.2"
+    "react-redux": "5.1.2",
+    "react-native-windows": "^0.61.0-0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

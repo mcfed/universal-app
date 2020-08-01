@@ -1,4 +1,5 @@
 const macSwitch = '--use-react-native-macos';
+const winSwitch = '--use-react-native-windows';
 const webSwitch = '--use-react-native-web';
 const clientSwitch = '--use-react-native-client';
 
@@ -23,4 +24,12 @@ if (process.argv.includes(clientSwitch)) {
   module.exports = {
     reactNativePath: 'node_modules/react-native-web',
   };
+}
+
+if (process.argv.includes(winSwitch)) {
+    process.argv = process.argv.filter(arg => arg !== winSwitch);
+    process.argv.push('--config=metro.config.client.js');
+    module.exports = {
+        reactNativePath: fs.realpathSync(path.resolve(require.resolve('react-native-windows/package.json'), '..')),
+    };
 }
