@@ -28,8 +28,11 @@ if (process.argv.includes(clientSwitch)) {
 
 if (process.argv.includes(winSwitch)) {
     process.argv = process.argv.filter(arg => arg !== winSwitch);
-    process.argv.push('--config=metro.config.client.js');
+    process.argv.push('--config=metro.config.windows.js');
     module.exports = {
-        reactNativePath: fs.realpathSync(path.resolve(require.resolve('react-native-windows/package.json'), '..')),
+      reactNativePath: 'node_modules/react-native-windows',
     };
+    // module.exports = {
+    //     reactNativePath: fs.realpathSync(path.resolve(require.resolve('react-native-windows/package.json'), '..')),
+    // };
 }

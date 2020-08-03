@@ -11,16 +11,16 @@ const blacklist = require('metro-config/src/defaults/blacklist');
 const rnPath = fs.realpathSync(
   path.resolve(require.resolve('react-native/package.json'), '..'),
 );
-const rnwPath = fs.realpathSync(
-  path.resolve(require.resolve('react-native-windows/package.json'), '..'),
-);
+// const rnwPath = fs.realpathSync(
+//   path.resolve(require.resolve('react-native-windows/package.json'), '..'),
+// );
 
 module.exports = {
   resolver: {
     extraNodeModules: {
       // Redirect react-native to react-native-windows
-      'react-native': rnwPath,
-      'react-native-windows': rnwPath,
+      'react-native': rnPath,
+      // 'react-native-windows': rnwPath,
     },
     // Include the macos platform in addition to the defaults because the fork includes macos, but doesn't declare it
     platforms: ['ios', 'android', 'windesktop', 'windows', 'web', 'macos'],
@@ -32,9 +32,9 @@ module.exports = {
       ),
 
       // This stops "react-native run-windows" from causing the metro server to crash if its already running
-      new RegExp(
-        `${path.resolve(__dirname, 'windows').replace(/[/\\]/g, '/')}.*`,
-      ),
+      // new RegExp(
+      //   `${path.resolve(__dirname, 'windows').replace(/[/\\]/g, '/')}.*`,
+      // ),
     ]),
   },
   transformer: {

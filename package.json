@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start:macos": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-macos",
     "start:client": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-client",
+    "start:windows": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-windows",
     "start:web": "node node_modules/react-native-macos/local-cli/cli.js start --use-react-native-web"
   },
   "dependencies": {
